@@ -1,6 +1,27 @@
 // 1. Create a function `createUser` that accepts `name` and `age` and returns a new object with those properties.
 
+function CreateUser(name,age){
+    this.name = name;
+    this.age = age;
+}
+var user1 = new CreateUser("Baljeet",26);
+
 // 2. Add a method named `sayHello` inside the object created above. When called it should alert `Welcome {user}`. Replace `{user}` with the name of the user.
+
+function CreateUser(name,age){
+    this.name = name;
+    this.age = age;
+}
+
+CreateUser.prototype={
+    sayHello : function(){
+        alert (`Welcome ${this.name}`)
+    }
+}
+var user1 = new CreateUser("Baljeet",26);
+
+
+
 
 // 3. Use the data (name, age) of two different person to create the object using `createUser`. Store the returned value in `personOne` and `personTwo`.
 
@@ -17,3 +38,16 @@
 // 9. Check by creating two instance of the class using data of two different persons and re-assign the value of `personOne` and `personTwo`
 
 // 10. Try calling `personOne.sayHello()` and `personTwo.sayHello()`. Check if you get the required output.
+
+function CreateUser(name,age){
+    this.name = name;
+    this.age = age;
+}
+
+CreateUser.prototype={
+    sayHello : function(){
+        alert (`Welcome ${this.name}`)
+    }
+}
+var user1 = new CreateUser("Baljeet",26);
+var user2 = new CreateUser("Baljeet Singh", 25)
