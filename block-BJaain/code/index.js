@@ -1,10 +1,10 @@
 console.log(this.document === document); // Output
 
-// ------------
+true
 
 console.log(this === window); //Output
 
-// ------------
+true
 
 var myFunction = function () {
   console.log(this);
