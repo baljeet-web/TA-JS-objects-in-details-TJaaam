@@ -4,15 +4,16 @@
 
 /*** CHALLENGE 1 of 1 ***/
 
-function makePerson(name, age) {
-  // add code here
+function MakePerson(name, age) {
+  this.name = name;
+  this.age = age;
 }
 
-var vicky = makePerson('Vicky', 24);
+var vicky = new MakePerson('Vicky', 24);
 
-// /********* Uncomment these lines to test your work! *********/
-// console.log(vicky.name); // -> Logs 'Vicky'
-// console.log(vicky.age); // -> Logs 24
+/********* Uncomment these lines to test your work! *********/
+console.log(vicky.name); // -> Logs 'Vicky'
+console.log(vicky.age); // -> Logs 24
 
 /****************************************************************
                        USING OBJECT.CREATE
@@ -21,24 +22,27 @@ var vicky = makePerson('Vicky', 24);
 /*** CHALLENGE 1 of 3 ***/
 
 var personStore = {
-  // add code here
+    greet(){
+      console.log(`hello`)
+    }
 };
 
 // /********* Uncomment this line to test your work! *********/
-// personStore.greet(); // -> Logs 'hello'
+personStore.greet(); // -> Logs 'hello'
 
 /*** CHALLENGE 2 of 3 ***/
 
-function personFromPersonStore(name, age) {
-  // add code here
+function PersonFromPersonStore(name, age) {
+  this.name = name;
+  this.age = age;
 }
 
-var sandra = personFromPersonStore('Sandra', 26);
+var sandra = new PersonFromPersonStore('Sandra', 26);
 
 // /********* Uncomment these lines to test your work! *********/
-// console.log(sandra.name); // -> Logs 'Sandra'
-// console.log(sandra.age); //-> Logs 26
-// sandra.greet(); //-> Logs 'hello'
+console.log(sandra.name); // -> Logs 'Sandra'
+console.log(sandra.age); //-> Logs 26
+sandra.greet(); //-> Logs 'hello'
 
 /*** CHALLENGE 3 of 3 ***/
 
