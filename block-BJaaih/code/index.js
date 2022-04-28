@@ -5,6 +5,15 @@
 
 // myMap function goes here
 
+Array.prototype.myMap = function (cb) {
+  let arr = [];
+  this.forEach((ele) => {
+    arr.push(cb(ele));
+  });
+  return arr;
+};
+
+
 // Test the myMap function you created above
 
 let numbers = [1, 5, 6, 8, 9];
@@ -29,6 +38,18 @@ After adding the function test it using the code below.
 */
 
 // You code goes here
+
+Array.prototype.myFilter = function (cb) {
+  let arr = [];
+  this.forEach((ele) => {
+    if (cb(ele) === true) {
+      arr.push(ele);
+    }
+  });
+  return arr;
+};
+
+
 
 let even = numbers.myFilter(function (num) {
   return num % 2 === 0;
