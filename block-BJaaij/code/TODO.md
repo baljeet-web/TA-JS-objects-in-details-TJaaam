@@ -15,6 +15,24 @@ Book class will have the following methods:
 
 - `markBookAsRead` when called will change the `isRead` property on the book to be `true`. It will also change the `finishedDate` to be the `Date.now()` when this function is called.
 
+```js
+
+class Book{
+    constructor (title,category,author,isRead = false,finishedDate){
+        this.title = title;
+        this.category = category;
+        this.author = author;
+        this.isRead = false;
+        this.finishedDate = finishedDate;
+    }
+
+    markBookAsRead(){
+        return isRead = true;
+    }
+}
+
+let a = new Book("Rich Dad Poor Dad", "Motivational",true, 12-11-2011);
+
 #### BookList should have the following properties:
 
 1. An array of all the Books
